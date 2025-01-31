@@ -31,8 +31,10 @@ public class DrinkSong {
      */
     private static String makeVerse(int n, SongInfo songInfo) {
 
-        return ("%s %s, %s.\n" +
-                "%s, %s %s.\n").formatted(songInfo.itemPhrase(n), songInfo.location(), songInfo.itemPhrase(n), songInfo.action(), songInfo.itemPhrase(n-1), songInfo.location());
+        return ("""
+                %s %s, %s.
+                %s, %s %s.
+                """).formatted(songInfo.itemPhrase(n), songInfo.location(), songInfo.itemPhrase(n), songInfo.action(), songInfo.itemPhrase(n-1), songInfo.location());
     }
 
 }

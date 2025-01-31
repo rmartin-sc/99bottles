@@ -37,8 +37,10 @@ public class DrinkSong {
      */
     private static String makeVerse(int n, String itemSingular, String itemPlural, String location, String action) {
 
-        return ("%d %s %s, %d  %s.\n" +
-                "%s, %d %s %s.\n").formatted(n, pluralize(n, itemSingular, itemPlural), location, n, pluralize(n, itemSingular, itemPlural), action, n - 1, pluralize(n-1, itemSingular, itemPlural), location);
+        return ("""
+                %d %s %s, %d  %s.
+                %s, %d %s %s.
+                """).formatted(n, pluralize(n, itemSingular, itemPlural), location, n, pluralize(n, itemSingular, itemPlural), action, n - 1, pluralize(n-1, itemSingular, itemPlural), location);
     }
 
     /**
