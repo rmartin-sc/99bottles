@@ -1,0 +1,38 @@
+package _02_data_and_pure_functions.using_record;
+
+/**
+ * A class with a static method that generates a song of the "99 bottles" form.
+ */
+public class DrinkSong {
+
+    /**
+     * Generates a song of the "99 bottles" form.
+     * @param numVerses The number of verses to generate
+     * @param songInfo The information needed to generate the song
+     * @return A string containing the entire song
+     */
+    public static String of(int numVerses, SongInfo songInfo) {
+        var song = new StringBuilder();
+
+        for (int i = numVerses; i > 0; i--) {
+            song.append(makeVerse(i, songInfo));
+        }
+
+        song.append("Go to the store and buy some more, %d %s %s.\n".formatted(numVerses, songInfo.item(numVerses), songInfo.location()));
+
+        return song.toString();
+    }
+
+    /**
+     * Generates the nth verse of song of the "99 bottles" form.
+     * @param n The verse number to generate
+     * @param songInfo The information needed to generate the song
+     * @return A string containing the nth verse of the song
+     */
+    private static String makeVerse(int n, SongInfo songInfo) {
+
+        return ("%d %s %s, %d  %s.\n" +
+                "%s, %d %s %s.\n").formatted(n, songInfo.item(n), songInfo.location(), n, songInfo.item(n), songInfo.action(), n - 1, songInfo.item(n-1), songInfo.location());
+    }
+
+}
