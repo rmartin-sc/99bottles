@@ -3,14 +3,14 @@ package _01_simple;
 public class Main {
 
 
-    public static void main(String[] args) {
+    static void main() {
 
         // DrinkSong.sing__naive();
 
-        //singSong_evenMoreGeneralized(9, "bottle of beer", "bottles of beer", "on the wall", "Take one down, pass it around");
-        DrinkSong.singBeerSong(99);
-        DrinkSong.sing__evenMoreGeneralized(9, "whisky flask", "whisky flasks", "in my coat", "Take one out, slosh it about");
-        DrinkSong.sing__evenMoreGeneralized(9, "stein of mead", "steins of mead", "on the bar", "Tip one back and down the hatch");
+        //singSong_evenMoreGeneralized(9, "bottle of pop", "bottles of pop", "on the wall", "Take one down, pass it around");
+        DrinkSong.singPopSong(99);
+        DrinkSong.sing__evenMoreGeneralized(9, "energy drink", "energy drinks", "in my coat", "Tip one back and down the hatch");
+        DrinkSong.sing__evenMoreGeneralized(9, "jug of milk", "jugs of milk", "in the fridge", "Take one out, slosh it about");
 
     }
 }
